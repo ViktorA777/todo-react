@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  max-width: 1145px;
+  margin: 0 auto;
+  margin-top: 32px;
+  height: 62px;
+  justify-content: space-between;
+  align-items: center;
+  background: #e5e5e5;
+  border-radius: 8px;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #1f1f1f;
+  margin-left: 24px;
+}
+
+.img {
+  display: flex;
+  width: 55px;
+  justify-content: space-between;
+  margin-right: 24px;
+}

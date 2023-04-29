@@ -40,7 +40,7 @@
   }
 
   .wrapper {
-    background-color: #e5e5e5;
+    background-color: #f4f5f4;
   }
 
   .container {
@@ -68,5 +68,12 @@
     font-size: 14px;
     line-height: 14px;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .union {
+    margin-left: 10px;
   }
 }
