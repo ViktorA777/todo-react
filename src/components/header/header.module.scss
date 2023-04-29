@@ -1,0 +1,86 @@
+.header {
+  padding-top: 35px;
+  max-height: 88px;
+  display: flex;
+  align-items: center;
+  max-width: 1145px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #4448da;
+}
+
+.list {
+  display: flex;
+  width: 342px;
+  justify-content: space-between;
+}
+
+.menu {
+  margin-left: 439px;
+}
+
+.icons {
+  display: flex;
+  width: 204px;
+  justify-content: space-between;
+  margin-left: 56px;
+}
+
+a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #1f1f1f;
+  text-decoration: none;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+.button {
+  border: 1px solid #4448da;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 92px;
+  height: 38px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #4448da;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+a:before {
+  content: "";
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #4448da;
+
+  transition: 0.33s;
+  transform: scaleX(0);
+}
+
+a:hover {
+  color: #4448da;
+}
+
+a:hover:before {
+  transform: scaleX(1);
+}
