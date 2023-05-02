@@ -1,3 +1,4 @@
+@import "../../assets/styles/veriables.scss";
 * {
   padding: 0;
   margin: 0;
@@ -40,7 +41,7 @@
   }
 
   .wrapper {
-    background-color: #f4f5f4;
+    background-color: $main-color;
   }
 
   .container {
@@ -49,31 +50,5 @@
     margin: 0 auto;
     margin-top: 56px;
     justify-content: space-between;
-  }
-
-  .content {
-    display: flex;
-    margin-left: 430px;
-    width: 424px;
-    justify-content: space-between;
-  }
-
-  .button {
-    background: #4448da;
-    border-radius: 8px;
-    width: 154px;
-    height: 46px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .union {
-    margin-left: 10px;
   }
 }
