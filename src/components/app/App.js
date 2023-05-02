@@ -2,9 +2,8 @@ import { useState } from "react";
 
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import Input from "../input/Input";
+import AddForm from "../addForm/AddForm";
 import ItemList from "../itemList/ItemList";
-import union from "../../assets/icons/union.svg";
 
 import styles from "../../assets/styles/style.module.scss";
 
@@ -25,13 +24,7 @@ function App() {
     <div className={styles.wrapper}>
       <Header />
       <div className={styles.container}>
-        <Input text="Поиск" />
-        <div className={styles.content}>
-          <Input text="Введите текст" />
-          <button className={styles.button}>
-            Добавить <img className={styles.union} src={union} />
-          </button>
-        </div>
+        <AddForm todo={todo} setTodo={setTodo} />
       </div>
       <ItemList todo={todo} setTodo={setTodo} />
       <Footer />

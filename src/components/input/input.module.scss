@@ -1,13 +1,17 @@
+@import "../../assets/styles/veriables.scss";
 .input {
-  border: 1px solid #e5e5e5;
+  border: 1px solid $grey;
   border-radius: 8px;
   width: 254px;
   height: 46px;
-  color: rgba(31, 31, 31, 0.3);
+  color: $dark;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   padding-left: 14px;
-  background-color: #f4f5f4;
+  background-color: $main-color;
+  &:focus {
+    outline: none;
+  }
 }

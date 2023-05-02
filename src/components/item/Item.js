@@ -2,10 +2,31 @@ import trash from "../../assets/icons/trash.svg";
 import edit from "../../assets/icons/edit.svg";
 import styles from "./item.module.scss";
 
-function Item({ title, onDeleteTodo, todo }) {
+function Item({
+  title,
+  onDeleteTodo,
+  todo,
+  onEditTodo,
+  editTodo,
+  id,
+  value,
+  setValue,
+  onSaveTodo
+}) {
   return (
     <div className={styles.container}>
-      <span className={styles.text}>{title}</span>
+      {editTodo == id ? (
+        <div>
+          <input
+            className={styles.input}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
+          <button onClick={() => onSaveTodo(todo.id)} className={styles.button}>Сохранить</button>
+        </div>
+      ) : (
+        <div className={styles.text}>{title}</div>
+      )}
       <div className={styles.img}>
         <button
           onClick={() => onDeleteTodo(todo.id)}
@@ -13,7 +34,10 @@ function Item({ title, onDeleteTodo, todo }) {
         >
           <img src={trash} />
         </button>
-        <button className={styles.background}>
+        <button
+          onClick={() => onEditTodo(todo.id)}
+          className={styles.background}
+        >
           <img src={edit} />
         </button>
       </div>

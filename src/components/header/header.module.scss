@@ -1,3 +1,4 @@
+@import '../../assets/styles/veriables.scss';
 .header {
   padding-top: 35px;
   max-height: 88px;
@@ -13,7 +14,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: #4448da;
+  color: $blue;
 }
 
 .list {
@@ -39,14 +40,32 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: #1f1f1f;
+  color: $dark;
   text-decoration: none;
   padding-bottom: 4px;
   position: relative;
+  &:before {
+   content: "";
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: $blue;
+ 
+   transition: 0.33s;
+   transform: scaleX(0);
+ }
+ &:hover {
+   color: $blue;
+ }
+ &:hover:before {
+   transform: scaleX(1);
+ }
 }
 
 .button {
-  border: 1px solid #4448da;
+  border: 1px solid $blue;
   border-radius: 8px;
   box-sizing: border-box;
   width: 92px;
@@ -56,31 +75,10 @@ a {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  color: #4448da;
+  color: $blue;
 }
 
 .content {
   display: flex;
   align-items: center;
-}
-
-a:before {
-  content: "";
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #4448da;
-
-  transition: 0.33s;
-  transform: scaleX(0);
-}
-
-a:hover {
-  color: #4448da;
-}
-
-a:hover:before {
-  transform: scaleX(1);
 }
