@@ -27,8 +27,6 @@ function ItemList({ todo, setTodo }) {
     setTodo(newTodo);
   }
 
-
-
   const elements = todo.map((item) => {
     return (
       <Item

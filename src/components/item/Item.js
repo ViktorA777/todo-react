@@ -11,7 +11,7 @@ function Item({
   id,
   value,
   setValue,
-  onSaveTodo
+  onSaveTodo,
 }) {
   return (
     <div className={styles.container}>
@@ -21,8 +21,11 @@ function Item({
             className={styles.input}
             value={value}
             onChange={(e) => setValue(e.target.value)}
+            autoFocus={true}
           />
-          <button onClick={() => onSaveTodo(todo.id)} className={styles.button}>Сохранить</button>
+          <button onClick={() => onSaveTodo(todo.id)} className={styles.button}>
+            Сохранить
+          </button>
         </div>
       ) : (
         <div className={styles.text}>{title}</div>
