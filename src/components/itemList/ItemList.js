@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Item from "../item/Item";
 
-function ItemList({ todo, setTodo }) {
+function ItemList({ todo, setTodo, string }) {
   const [editTodo, setEditTodo] = useState(null);
   const [value, setValue] = useState("");
 
@@ -11,15 +11,15 @@ function ItemList({ todo, setTodo }) {
     setValue(title);
   }
 
-  function onSaveTodo (id) {
-   let newTodo = [...todo].map(item => {
+  function onSaveTodo(id) {
+    let newTodo = [...todo].map((item) => {
       if (item.id == id) {
-         item.title = value
+        item.title = value;
       }
-      return item
-   })
-   setTodo(newTodo)
-   setEditTodo(null)
+      return item;
+    });
+    setTodo(newTodo);
+    setEditTodo(null);
   }
 
   function onDeleteTodo(id) {
@@ -27,7 +27,11 @@ function ItemList({ todo, setTodo }) {
     setTodo(newTodo);
   }
 
-  const elements = todo.map((item) => {
+  const filteredTodo = todo.filter((item) => {
+    return item.title.toLowerCase().includes(string.toLowerCase());
+  });
+
+  const elements = filteredTodo.map((item) => {
     return (
       <Item
         key={item.id}

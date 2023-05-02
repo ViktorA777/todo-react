@@ -5,8 +5,12 @@ import nextId from "react-id-generator";
 
 import styles from "./addForm.module.scss";
 
-function AddForm({ todo, setTodo }) {
+function AddForm({ todo, setTodo, onChange }) {
   const [value, setValue] = useState("");
+
+  const stringValue = (e) => {
+    onChange(e.target.value);
+  };
 
   function onAddTodo(value) {
     setTodo([
@@ -21,7 +25,11 @@ function AddForm({ todo, setTodo }) {
 
   return (
     <>
-      <input className={styles.input} placeholder="Поиск" />
+      <input
+        className={styles.input}
+        placeholder="Поиск"
+        onChange={stringValue}
+      />
       <div className={styles.content}>
         <input
           className={styles.input}

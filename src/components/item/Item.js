@@ -22,6 +22,7 @@ function Item({
             value={value}
             onChange={(e) => setValue(e.target.value)}
             autoFocus={true}
+            onKeyDown={(e) => e.key === "Enter" && onSaveTodo(todo.id)}
           />
           <button onClick={() => onSaveTodo(todo.id)} className={styles.button}>
             Сохранить
