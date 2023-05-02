@@ -20,13 +20,19 @@ function App() {
     { id: 9, title: "Купить продукты" },
   ]);
 
+  const [string, setString] = useState('');
+
+  const stringValue = (string) => {
+   setString(string)
+  }
+
   return (
     <div className={styles.wrapper}>
       <Header />
       <div className={styles.container}>
-        <AddForm todo={todo} setTodo={setTodo} />
+        <AddForm todo={todo} setTodo={setTodo} onChange={stringValue}/>
       </div>
-      <ItemList todo={todo} setTodo={setTodo} />
+      <ItemList todo={todo} setTodo={setTodo} string={string}/>
       <Footer />
     </div>
   );
