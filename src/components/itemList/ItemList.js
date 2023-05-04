@@ -13,7 +13,7 @@ function ItemList({ todo, setTodo, string }) {
 
   function onSaveTodo(id) {
     let newTodo = [...todo].map((item) => {
-      if (item.id == id) {
+      if (item.id === id) {
         item.title = value;
       }
       return item;

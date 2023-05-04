@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import bell from "../../assets/icons/bell.svg";
 import profile from "../../assets/icons/profile.svg";
 
@@ -12,16 +14,52 @@ function Header() {
           <div className={styles.menu}>
             <ul className={styles.list}>
               <li>
-                <a href="">Главная</a>
+                <NavLink
+                  to="/main"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#4448da" : "",
+                    };
+                  }}
+                >
+                  Главная
+                </NavLink>
               </li>
               <li>
-                <a href="">Список</a>
+                <NavLink
+                  to="/list"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#4448da" : "",
+                    };
+                  }}
+                >
+                  Список
+                </NavLink>
               </li>
               <li>
-                <a href="">Друзья</a>
+                <NavLink
+                  to="/friends"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#4448da" : "",
+                    };
+                  }}
+                >
+                  Друзья
+                </NavLink>
               </li>
               <li>
-                <a href="">Контакты</a>
+                <NavLink
+                  to="/contacts"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#4448da" : "",
+                    };
+                  }}
+                >
+                  Контакты
+                </NavLink>
               </li>
             </ul>
           </div>
