@@ -48,7 +48,17 @@
     display: flex;
     width: 1145px;
     margin: 0 auto;
-    margin-top: 56px;
     justify-content: space-between;
   }
+
+  .h3 {
+    display: flex;
+    justify-content: left;
+    color: $blue;
+    max-width: 1145px;
+    margin: 0 auto;
+    padding-top: 56px;
+    padding-bottom: 20px;
+  }
+
 }

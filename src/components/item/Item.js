@@ -15,7 +15,7 @@ function Item({
 }) {
   return (
     <div className={styles.container}>
-      {editTodo == id ? (
+      {editTodo === id ? (
         <div>
           <input
             className={styles.input}
