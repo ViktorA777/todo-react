@@ -1,5 +1,7 @@
-import trash from "../../assets/icons/trash.svg";
-import edit from "../../assets/icons/edit.svg";
+import ButtonSave from "../buttons/ButtonSave";
+import ButtonDelete from "../buttons/ButtonDelete";
+import ButtonEdit from "../buttons/ButtonEdit";
+
 import styles from "./item.module.scss";
 
 function Item({
@@ -24,26 +26,14 @@ function Item({
             autoFocus={true}
             onKeyDown={(e) => e.key === "Enter" && onSaveTodo(todo.id)}
           />
-          <button onClick={() => onSaveTodo(todo.id)} className={styles.button}>
-            Сохранить
-          </button>
+          <ButtonSave onSaveTodo={() => onSaveTodo(todo.id)} todo={todo} />
         </div>
       ) : (
         <div className={styles.text}>{title}</div>
       )}
       <div className={styles.img}>
-        <button
-          onClick={() => onDeleteTodo(todo.id)}
-          className={styles.background}
-        >
-          <img src={trash} />
-        </button>
-        <button
-          onClick={() => onEditTodo(todo.id)}
-          className={styles.background}
-        >
-          <img src={edit} />
-        </button>
+        <ButtonDelete onDeleteTodo={onDeleteTodo} todo={todo} />
+        <ButtonEdit onEditTodo={onEditTodo} todo={todo} />
       </div>
     </div>
   );

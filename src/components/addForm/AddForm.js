@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import union from "../../assets/icons/union.svg";
+import ButtonAdd from "../buttons/ButtonAdd";
+
 import nextId from "react-id-generator";
 
 import styles from "./addForm.module.scss";
@@ -13,14 +14,17 @@ function AddForm({ todo, setTodo, onChange }) {
   };
 
   function onAddTodo(value) {
-    setTodo([
-      {
-        id: nextId(),
-        title: value,
-      },
-      ...todo,
-    ]);
-    setValue("");
+    if (value == "") return;
+    else {
+      setTodo([
+        {
+          id: nextId(),
+          title: value,
+        },
+        ...todo,
+      ]);
+      setValue("");
+    }
   }
 
   return (
@@ -38,9 +42,7 @@ function AddForm({ todo, setTodo, onChange }) {
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && onAddTodo(value)}
         />
-        <button onClick={() => onAddTodo(value)} className={styles.button}>
-          Добавить <img className={styles.union} src={union} />
-        </button>
+        <ButtonAdd onAddTodo={() => onAddTodo(value)} value={value} />
       </div>
     </>
   );
