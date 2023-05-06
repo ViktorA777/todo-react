@@ -1,11 +1,7 @@
 import styles from "../../assets/styles/style.module.scss";
 
 function MainPage() {
-  return (
-    <div className={styles.h3}>
-      <h3>Главная</h3>
-    </div>
-  );
+  return <h3 className={styles.h3}>Главная</h3>;
 }
 
 export default MainPage;

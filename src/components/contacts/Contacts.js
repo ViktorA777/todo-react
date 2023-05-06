@@ -1,11 +1,7 @@
 import styles from "../../assets/styles/style.module.scss";
 
 function Contacts() {
-  return (
-    <div className={styles.h3}>
-      <h3>Контакты</h3>
-    </div>
-  );
+  return <h3 className={styles.h3}>Контакты</h3>;
 }
 
 export default Contacts;

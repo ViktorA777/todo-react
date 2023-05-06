@@ -6,83 +6,74 @@
   align-items: center;
   max-width: 1145px;
   margin: 0 auto;
-}
-
-.logo {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  color: $blue;
-}
-
-.list {
-  display: flex;
-  width: 342px;
-  justify-content: space-between;
-}
-
-.menu {
-  padding-left: 439px;
-}
-
-.icons {
-  display: flex;
-  width: 204px;
-  justify-content: space-between;
-  margin-left: 56px;
-}
-
-a {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  color: $dark;
-  text-decoration: none;
-  padding-bottom: 4px;
-  position: relative;
-  &:before {
-    content: "";
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: $blue;
-
-    transition: 0.33s;
-    transform: scaleX(0);
-  }
-  &:hover {
+  .logo {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
     color: $blue;
   }
-  &:hover:before {
-    transform: scaleX(1);
+  .menu {
+    padding-left: 439px;
+    .list {
+      display: flex;
+      width: 342px;
+      justify-content: space-between;
+    }
   }
-}
+  .icons {
+    display: flex;
+    width: 204px;
+    justify-content: space-between;
+    margin-left: 56px;
+    height: 48px;
+    align-items: center;
+    .content {
+      display: flex;
+      align-items: center;
+      .button {
+        border: 1px solid $blue;
+        border-radius: 8px;
+        box-sizing: border-box;
+        width: 92px;
+        height: 38px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        color: $blue;
+      }
+    }
+  }
+  a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: $dark;
+    text-decoration: none;
+    padding-bottom: 4px;
+    position: relative;
+    &:before {
+      content: "";
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $blue;
 
-.button {
-  border: 1px solid $blue;
-  border-radius: 8px;
-  box-sizing: border-box;
-  width: 92px;
-  height: 38px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-  color: $blue;
-}
-
-.content {
-  display: flex;
-  align-items: center;
-}
-
-.active {
-  color: $blue;
+      transition: 0.33s;
+      transform: scaleX(0);
+    }
+    &:hover {
+      color: $blue;
+    }
+    &:hover:before {
+      transform: scaleX(1);
+    }
+  }
 }
