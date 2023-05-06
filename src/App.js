@@ -4,7 +4,7 @@ import Header from "./components/header/Header";
 import MainPage from "./components/mainPage/MainPage";
 import TodoList from "./components/todoList/TodoList";
 import Footer from "./components/footer/Footer";
-import Button from "./components/buttons/ButtonAdd";
+
 
 import styles from "./assets/styles/style.module.scss";
 import Friends from "./components/friends/Friends";
